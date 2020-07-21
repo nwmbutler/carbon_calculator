@@ -13,7 +13,8 @@
     "test": "cd ./client && npm run test",
     "server": "cd ./server && npm run start",
     "client": "cd ./client && npm run start",
-    "start": "npm run dev",
+    "start": "cd ./server && npm run start",
+    "heroku-postbuild": "cd client && npm install && npm run build",
     "dev": "concurrently \"cd server && npm run start\" \"cd client && npm run start\""
   },
   "repository": {
