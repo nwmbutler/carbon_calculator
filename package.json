@@ -13,8 +13,12 @@
     "test": "cd ./client && npm run test",
     "server": "cd ./server && npm run start",
     "client": "cd ./client && npm run start",
+<<<<<<< HEAD
     "start": "cd ./server && npm run start",
     "heroku-postbuild": "cd client && npm install && npm run build",
+=======
+    "start": "npm run dev",
+>>>>>>> be839c1b4d119bbe38140aef132aee10bc4856e7
     "dev": "concurrently \"cd server && npm run start\" \"cd client && npm run start\""
   },
   "repository": {
