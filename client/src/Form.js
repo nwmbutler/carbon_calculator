@@ -11,15 +11,19 @@ export default class Form extends React.Component {
   };
   }
 
+callAPI(new_data) {
+      const response = axios.post("http://localhost:5000/testAPI", { posted_data: new_data });
+      console.log('Returned data:', response);
+    } catch (e) {
+      console.log(`Axios request failed: ${e}`);
+}
 
   handleInputChange = e => {
-    alert("chenaged")
     this.setState({
 
       [e.target.name]: e.target.value,
     });
   };
-
 
   handleSubmit = e => {
     e.preventDefault();
@@ -30,9 +34,8 @@ export default class Form extends React.Component {
       origin, destination, mode
     };
 
-    alert(journey.mode)
+    this.callAPI(journey)
   }
-
 
   render() {
       return (
