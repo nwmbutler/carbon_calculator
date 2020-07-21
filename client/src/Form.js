@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 
 export default class Form extends React.Component {
   constructor(props) {
@@ -14,7 +15,7 @@ export default class Form extends React.Component {
   handleInputChange = e => {
     alert("chenaged")
     this.setState({
-      
+
       [e.target.name]: e.target.value,
     });
   };
@@ -49,15 +50,15 @@ export default class Form extends React.Component {
             name = 'destination'
             onChange={this.handleInputChange}
           />
-          
+
     <select name = 'mode' onChange={this.handleInputChange} value={this.state.mode}> >
         <option value="null" ></option>
         <option value="Car" >Car</option>
         <option value="Bike" >Bike</option>
         <option value="Walk" >Walk</option>
-       
+
       </select>
-      
+
           <button type="submit">
                 Calculate
               </button>
