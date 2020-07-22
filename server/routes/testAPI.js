@@ -9,6 +9,8 @@ router.post('/', function(req, res) {
 
   axios.get('https://maps.googleapis.com/maps/api/distancematrix/json',
   {
+
+    console.log('hello')
     params: { origins: 'london', destinations: 'Glasgow', key: 'AIzaSyAdbzu2YviS02zhoNB79zqsGdyEwxFzDCw'}})
   .then(function (response) {
     console.log(response)
