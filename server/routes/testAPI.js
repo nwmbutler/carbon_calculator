@@ -12,7 +12,7 @@ axios.get('https://maps.googleapis.com/maps/api/distancematrix/json', {
     origins: journey_data_out.origin,
     destinations: journey_data_out.destination,
     mode: journey_data_out.mode,
-    key: 'AIzaSyDiJ3hGxadOyarSWI0NjyUbV2aVNUK3-kE'}})
+    key: ''}})
 
   .then(function (response) {
     // console.log(response)
