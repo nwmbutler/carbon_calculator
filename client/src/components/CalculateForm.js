@@ -7,13 +7,16 @@ export default class CalculateForm extends React.Component {
 
     this.state = { origin: '',
   destination: '',
-  mode: ''
+  mode: '',
+  apiResponse: ''
   };
   }
 
-callAPI(new_data) {
-      const response = axios.post("http://localhost:5000/testAPI", { posted_data: new_data });
-      console.log('Returned data:', response);
+async callAPI(new_data) {
+      const response = await axios.post("http://localhost:5000/testAPI", { posted_data: new_data })
+      console.log('Returned data:', response.data.answer);
+      this.setState({ apiResponse: response.data.answer })
+
     } catch (e) {
       console.log(`Axios request failed: ${e}`);
 }
@@ -40,7 +43,7 @@ callAPI(new_data) {
   render() {
       return (
         <form onSubmit={this.handleSubmit}>
-          <h1>Carbon Calculator</h1>
+          <h1>{this.state.apiResponse}</h1>
           <p>From</p>
           <input
             type="text"
