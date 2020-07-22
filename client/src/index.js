@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import Form from './Form';
+import './style/index.css';
+import CalculateForm from './components/CalculateForm';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Form />
+    <CalculateForm />
   </React.StrictMode>,
   document.getElementById('root')
 );
