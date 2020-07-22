@@ -59,9 +59,9 @@ async callAPI(new_data) {
 
     <select name = 'mode' onChange={this.handleInputChange} value={this.state.mode}> >
         <option value="null" ></option>
-        <option value="Car" >Car</option>
-        <option value="Bike" >Bike</option>
-        <option value="Walk" >Walk</option>
+        <option value="driving" >Car</option>
+        <option value="bicycling" >Bike</option>
+        <option value="walking" >Walk</option>
 
       </select>
 
