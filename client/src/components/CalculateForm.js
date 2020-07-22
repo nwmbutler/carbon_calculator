@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-export default class Form extends React.Component {
+export default class CalculateForm extends React.Component {
   constructor(props) {
     super(props);
 
