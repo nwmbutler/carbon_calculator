@@ -5,13 +5,12 @@ var axios = require ('axios');
 
 
 router.post('/', function(req, res) {
-    console.log(req.body.posted_data)
+    var testing = req.body.posted_data
+    console.log(testing)
 
   axios.get('https://maps.googleapis.com/maps/api/distancematrix/json',
   {
-
-    console.log('hello')
-    params: { origins: 'london', destinations: 'Glasgow', key: 'AIzaSyAdbzu2YviS02zhoNB79zqsGdyEwxFzDCw'}})
+    params: { origins: testing.origin, destinations: testing.destination, mode: testing.mode, key: ''}})
   .then(function (response) {
     console.log(response)
     var distance = response.data.rows[0].elements[0].distance.value
@@ -22,4 +21,3 @@ router.post('/', function(req, res) {
 });
 
 module.exports = router;
-
