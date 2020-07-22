@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "main": "server.js",
   "scripts": {
+    "test": "jest",
     "start": "concurrently \"node server.js\" \"node ./bin/www\"",
     "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
@@ -16,6 +17,13 @@
     "morgan": "~1.9.1"
   },
   "devDependencies": {
-    "concurrently": "^5.2.0"
+    "concurrently": "^5.2.0",
+    "jest": "^26.1.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
   }
 }
