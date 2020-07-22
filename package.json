@@ -1,9 +1,9 @@
 {
   "name": "server",
   "version": "0.0.0",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
-    "start": "concurrently \"node server.js\" \"node ./bin/www\"",
+    "start": "concurrently \"cd client && npm start\" \" node ./bin/www\"",
     "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "dependencies": {
