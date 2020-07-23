@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import "./style/App.css";
 class App extends Component {
     constructor(props) {
         super(props);
@@ -19,7 +18,7 @@ class App extends Component {
         return (
             <div className="App">
                 <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo" />
+                  
                     <h1 className="App-title">Welcome to React Folks</h1>
 
                  <p className="App-intro">{this.state.apiResponse}</p>
