@@ -15,3 +15,17 @@ Team two successes
 Team two blockers
 * Running server and client within the same project tree caused issues with file location and routing. 
 * Heroku currently hosts the server side
+
+### Day two
+
+Team successes 
+* Demonstated MVP successfully
+* Merged team ones work on Api calls   
+* Disassociated the front end and back end
+* Knowledge shared state of current project
+
+Team blockers
+* Adherence to Team charter raised as concern,working patterns addressed and revised - monitor
+* Actions required
+
+
